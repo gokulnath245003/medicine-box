@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock  %}
+
+{% block body %}
+	<h1 class="text-center">Scan your tag in the reader</h1>
+	<h2 class="text-center">Wait for the</h2>
+	<h3>Once you have done with scanning
+		<a href="/">Click Here</a>
+{% endblock %}

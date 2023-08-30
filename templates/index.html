@@ -1,0 +1,39 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center"> Medicine Box </h1>
+    <table>
+	<div class=p-3 m-0 border-0 bg-example>
+        <tr>
+	    <a href="add">
+	    <button type="button" class="btn btn-primary position-relative">
+		Register
+		<span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+	    		<span class="visually-hidden">New alerts</span>
+	  	</span>
+	    </button>
+	    </a>
+        </tr>
+	{% for user in users %}
+	<div class="p-3 m-0 border-0 bg-example">
+        <tr>
+	    <div class="list-group">
+	 	<a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+	    		{{user.name}}
+  		</a>
+  		<a href="update/{{user.id}}" class="list-group-item list-group-item-action">Update User</a>
+  		<a href="scan/{{user.id}}" class="list-group-item list-group-item-action">Scan Tag</a>
+	  	<a href="delete/{{user.id}}" class="list-group-item list-group-item-action">Delete User</a>
+	    </div>
+        </tr>
+	</div>
+	{% endfor %}
+    </table>
+{% endblock %}
+
